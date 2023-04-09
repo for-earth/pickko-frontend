@@ -8059,9 +8059,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pickko-frontend@workspace:.":
+"picko-frontend@workspace:.":
   version: 0.0.0-use.local
-  resolution: "pickko-frontend@workspace:."
+  resolution: "picko-frontend@workspace:."
   dependencies:
     "@next/eslint-plugin-next": ^13.3.0
     "@svgr/webpack": ^7.0.0
