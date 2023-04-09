@@ -1,1 +1,1 @@
-# pickko-frontend
+# picko-frontend
