@@ -21,7 +21,8 @@ module.exports = {
     'plugin:@next/next/recommended',
   ],
   plugins: [
-    // set your plugins
+    'simple-import-sort',
+    'unused-imports',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -29,14 +30,6 @@ module.exports = {
     },
     ecmaVersion: 12,
     sourceType: 'module',
-  },
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [['@', './src']],
-        extensions: ['.ts', '.js', '.tsx', '.json'],
-      },
-    },
   },
   overrides: [
     {
@@ -51,7 +44,7 @@ module.exports = {
         'flowtype',
       ],
       rules: {
-        // set your typescript rules
+        '@typescript-eslint/no-use-before-define': 'off',
       },
       parser: '@typescript-eslint/parser',
       parserOptions: {
@@ -68,7 +61,9 @@ module.exports = {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
       rules: {
-        // set your test eslint rules
+        'jest/no-identical-title': 'off',
+        'react-hooks/rules-of-hooks': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
       },
     },
     {
@@ -81,6 +76,33 @@ module.exports = {
     },
   ],
   rules: {
-    // set your rules
+    'react/require-default-props': 'off',
+    'import/order': 'off',
+    'react/jsx-no-useless-fragment': ['error', {
+      allowExpressions: true,
+    }],
+    '@next/next/no-html-link-for-pages': ['error', 'app/'],
+    'simple-import-sort/imports': ['error', {
+      groups: [
+        ['^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)'], // Packages. `react` related packages come first.
+        ['^react'],
+        ['^next'],
+        ['^@?\\w'],
+        ['^(@|@company|@ui|components|utils|config|vendored-lib)(/.*|$)'],
+        ['^\\u0000'],
+        ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+        ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+        ['^.+\\.svg$'],
+        ['^.+\\.s?css$'],
+      ],
+    }],
+    'simple-import-sort/exports': 'error',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': ['warn', {
+      vars: 'all',
+      varsIgnorePattern: '^_',
+      args: 'after-used',
+      argsIgnorePattern: '^_',
+    }],
   },
 };
