@@ -1,8 +1,8 @@
+import StartAccount from 'components/sIgnUp/StartAccount';
+
 function Page() {
   return (
-    <div>
-      Hello! picko!
-    </div>
+    <StartAccount />
   );
 }
 
