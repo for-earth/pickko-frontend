@@ -11,9 +11,7 @@ function Layout({ children }: PropsWithChildren) {
 
   return (
     <div className={styles.layoutWrapper}>
-      <div className={styles.contentBox}>
-        {children}
-      </div>
+      {children}
     </div>
   );
 }
