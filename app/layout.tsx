@@ -6,8 +6,8 @@ import 'styles/normalize.css';
 import 'styles/global.scss';
 
 export const metadata = {
-  title: 'Home',
-  description: 'Welcome to Next.js',
+  title: 'picko',
+  description: 'picko app',
 };
 
 function RootLayout({ children }: { children: ReactNode }) {

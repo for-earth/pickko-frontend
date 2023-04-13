@@ -1,8 +1,10 @@
-import StartAccount from 'components/sIgnUp/StartAccount';
+import LayoutContainer from 'components/common/LayoutContainer';
 
 function Page() {
   return (
-    <StartAccount />
+    <LayoutContainer backgroundColor="#EFC3BC">
+      test
+    </LayoutContainer>
   );
 }
 
