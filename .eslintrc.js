@@ -10,6 +10,8 @@ module.exports = {
     '.pnp.cjs',
     '.pnp.loader.cjs',
     'public/',
+    '.yarn/',
+    'storybook-static',
   ],
   extends: [
     'airbnb',
@@ -74,6 +76,13 @@ module.exports = {
         project: ['./cypress/tsconfig.json'],
       },
     },
+    {
+      extends: ['plugin:storybook/recommended'],
+      files: ['**/*.stories.ts?(x)'],
+      rules: {
+        'flowtype/no-types-missing-file-annotation': 'off',
+      },
+    },
   ],
   rules: {
     'react/require-default-props': 'off',
@@ -84,7 +93,7 @@ module.exports = {
     '@next/next/no-html-link-for-pages': ['error', 'app/'],
     'simple-import-sort/imports': ['error', {
       groups: [
-        ['^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)'], // Packages. `react` related packages come first.
+        ['^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)'],
         ['^react'],
         ['^next'],
         ['^@?\\w'],
