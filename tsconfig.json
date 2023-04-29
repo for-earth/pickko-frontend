@@ -28,10 +28,10 @@
     ]
   },
   "include": [
+    "@types",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "@types",
     ".next/types/**/*.ts"
   ],
   "exclude": [
