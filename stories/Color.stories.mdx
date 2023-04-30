@@ -1,0 +1,37 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+import { colors } from "../styles/palette";
+
+export const {
+  white,
+  black,
+  lemon,
+  salmon,
+  berrymilk,
+  cloud,
+  moss,
+  mustard,
+  forest,
+  indigo,
+  yam,
+  brick,
+} = colors;
+
+<Meta title="Token/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="White" colors={[white]} />
+  <ColorItem title="Black" colors={[black]} />
+  <ColorItem title="Lemon" colors={[lemon]} />
+  <ColorItem title="Salmon" colors={[salmon]} />
+  <ColorItem title="Berrymilk" colors={[berrymilk]} />
+  <ColorItem title="Cloud" colors={[cloud]} />
+  <ColorItem title="Moss" colors={[moss]} />
+  <ColorItem title="Mustard" colors={[mustard]} />
+  <ColorItem title="Forest" colors={[forest]} />
+  <ColorItem title="Indigo" colors={[indigo]} />
+  <ColorItem title="Yam" colors={[yam]} />
+  <ColorItem title="Brick" colors={[brick]} />
+</ColorPalette>

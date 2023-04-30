@@ -1,0 +1,375 @@
+import { Meta, Typeset, Source } from "@storybook/blocks";
+
+<Meta title="Token/Typography" />
+
+export const { type, weight, size, lineHieght } = {
+  type: {
+    pretendard:
+      "'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif",
+  },
+  weight: {
+    regular: "400",
+    meduim: "500",
+    semiBold: "600",
+    bold: "700",
+    extraBold: "800",
+    black: "900",
+  },
+  size: {
+    display: 64,
+    headline1: 48,
+    headline2: 32,
+    headline3: 24,
+    headline4: 20,
+    body1: 18,
+    body2: 16,
+    caption1: 13,
+    caption2: 11,
+  },
+  lineHieght: {
+    display: 68,
+    headline1: 52,
+    headline2: 36,
+    headline3: 32,
+    headline4: 28,
+    body1: 28,
+    body2: 24,
+    caption1: 22,
+    caption2: 18,
+  },
+};
+
+export const sampleText =
+  "다람쥐 헌 쳇바퀴에 타고파 ‘Typography’, 1972. @ㅇ0ㅇ ₩0 〈♥〉 『♪』";
+
+# Typography
+
+**Font:** Pretendard
+
+**FontSizes**
+
+<Typeset
+  fontSizes={[
+    size.display,
+    size.headline1,
+    size.headline2,
+    size.headline3,
+    size.headline4,
+    size.body1,
+    size.body2,
+    size.caption1,
+    size.caption2,
+  ]}
+  fontWeight={weight.bold}
+  sampleText={sampleText}
+  fontFamily={type.pretendard}
+/>
+
+**Weight:** 400(regular), 500(meduim), 600(semi bold), 700(bold), 800(extra bold), 900(black)
+
+<Typeset
+  fontSizes={[size.body1]}
+  sampleText={sampleText}
+  fontWeight={weight.regular}
+  fontFamily={type.pretendard}
+/>
+<Typeset
+  fontSizes={[size.body1]}
+  sampleText={sampleText}
+  fontWeight={weight.meduim}
+  fontFamily={type.pretendard}
+/>
+<Typeset
+  fontSizes={[size.body1]}
+  sampleText={sampleText}
+  fontWeight={weight.semiBold}
+  fontFamily={type.pretendard}
+/>
+<Typeset
+  fontSizes={[size.body1]}
+  sampleText={sampleText}
+  fontWeight={weight.bold}
+  fontFamily={type.pretendard}
+/>
+<Typeset
+  fontSizes={[size.body1]}
+  sampleText={sampleText}
+  fontWeight={weight.extraBold}
+  fontFamily={type.pretendard}
+/>
+<Typeset
+  fontSizes={[size.body1]}
+  sampleText={sampleText}
+  fontWeight={weight.black}
+  fontFamily={type.pretendard}
+/>
+
+## Display Font
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: 800;
+font-size: ${size.display}px;
+line-height: ${lineHieght.display}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.display]}
+  sampleText={sampleText}
+  fontWeight={weight.extraBold}
+  fontFamily={type.pretendard}
+/>
+
+## Headline 1 Font
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: 800;
+font-size: ${size.headline1}px;
+line-height: ${lineHieght.headline1}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.headline1]}
+  sampleText={sampleText}
+  fontWeight={weight.extraBold}
+  fontFamily={type.pretendard}
+/>
+
+## Headline 2 Font
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: 800;
+font-size: ${size.headline2}px;
+line-height: ${lineHieght.headline2}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.headline2]}
+  sampleText={sampleText}
+  fontWeight={weight.extraBold}
+  fontFamily={type.pretendard}
+/>
+
+## Headline 3 Font
+
+### Black
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: 900;
+font-size: ${size.headline3}px;
+line-height: ${lineHieght.headline3}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.headline3]}
+  sampleText={sampleText}
+  fontWeight={weight.black}
+  fontFamily={type.pretendard}
+/>
+
+### Bold
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: bold;
+font-size: ${size.headline3}px;
+line-height: ${lineHieght.headline3}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.headline3]}
+  sampleText={sampleText}
+  fontWeight={weight.bold}
+  fontFamily={type.pretendard}
+/>
+
+## Headline 4 Font
+
+### Bold
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: bold;
+font-size: ${size.headline4}px;
+line-height: ${lineHieght.headline4}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.headline4]}
+  sampleText={sampleText}
+  fontWeight={weight.bold}
+  fontFamily={type.pretendard}
+/>
+
+### Semi Bold
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: 600;
+font-size: ${size.headline4}px;
+line-height: ${lineHieght.headline4}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.headline4]}
+  sampleText={sampleText}
+  fontWeight={weight.semiBold}
+  fontFamily={type.pretendard}
+/>
+
+## Body 1 Font
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: bold;
+font-size: ${size.body1}px;
+line-height: ${lineHieght.body1}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.body1]}
+  sampleText={sampleText}
+  fontWeight={weight.bold}
+  fontFamily={type.pretendard}
+/>
+
+## Body 2 Font
+
+### Black
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: 900;
+font-size: ${size.body2}px;
+line-height: ${lineHieght.body2}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.body2]}
+  sampleText={sampleText}
+  fontWeight={weight.black}
+  fontFamily={type.pretendard}
+/>
+
+### Semi Bold
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: 600;
+font-size: ${size.body2}px;
+line-height: ${lineHieght.body2}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.body2]}
+  sampleText={sampleText}
+  fontWeight={weight.semiBold}
+  fontFamily={type.pretendard}
+/>
+
+## Caption 1 Font
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: 500;
+font-size: ${size.caption1}px;
+line-height: ${lineHieght.caption1}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.caption1]}
+  sampleText={sampleText}
+  fontWeight={weight.meduim}
+  fontFamily={type.pretendard}
+/>
+
+## Caption 2 Font
+
+**Styles:**
+
+<Source
+  language="css"
+  code={`
+font-weight: normal;
+font-size: ${size.caption2}px;
+line-height: ${lineHieght.caption2}px;
+`}
+  format
+  dark
+/>
+
+<Typeset
+  fontSizes={[size.caption2]}
+  sampleText={sampleText}
+  fontWeight={weight.regular}
+  fontFamily={type.pretendard}
+/>

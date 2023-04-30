@@ -22,7 +22,7 @@
   } @else if $code == "transparent" {
     @return transparent;
   } @else {
-    $list: str-split($code, ".");
+    $list: str-split($code, "/");
     $key: "";
 
     @if length($list) == 2 {
