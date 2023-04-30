@@ -1,0 +1,57 @@
+:root {
+  $black: '#000000';
+  /* color */
+  --white: #ffffff;
+  --black: #{$black};
+  --lemon: #f4eb5d;
+  --salmon: #ff9356;
+  --berrymilk: #efc3bc;
+  --cloud: #acbcd9;
+  --moss: #b9c79a;
+  --mustard: #f2cd80;
+  --forest: #3c4f2c;
+  --indigo: #61609a;
+  --yam: #a05595;
+  --brick: #ba4c4a;
+
+  /* effect style */
+  --small: 0px 2px 0px #{$black};
+}
+
+:root {
+  --font-weight-black: 900;
+  --font-weight-extra-bold: 800;
+  --font-weight-bold: bold;
+  --font-weight-semi-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: normal;
+}
+
+:root {
+  --display-font-size: 64px;
+  --display-line-height: 68px;
+
+  --headline-1-font-size: 48px;
+  --headline-1-line-height: 52px;
+
+  --headline-2-font-size: 32px;
+  --headline-2-line-height: 36px;
+
+  --headline-3-font-size: 24px;
+  --headline-3-line-height: 32px;
+
+  --headline-4-font-size: 20px;
+  --headline-4-line-height: 28px;
+
+  --body-1-font-size: 18px;
+  --body-1-line-height: 28px;
+
+  --body-2-font-size: 16px;
+  --body-2-line-height: 24px;
+
+  --caption-1-font-size: 13px;
+  --caption-1-line-height: 22px;
+
+  --caption-2-font-size: 11px;
+  --caption-2-line-height: 18px;
+}

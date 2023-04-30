@@ -10,40 +10,53 @@
     $weight: nth($list, 2);
   }
 
-  @if $font == "display" {
+  @if $font == "Display" {
     font-size: var(--display-font-size);
     line-height: var(--display-line-height);
-  } @else if $font == "headline" {
-    font-size: var(--headline-font-size);
-    line-height: var(--headline-line-height);
-  } @else if $font == "title.large" {
-    font-size: var(--large-title-font-size);
-    line-height: var(--large-title-line-height);
-  } @else if $font == "title.medium" {
-    font-size: var(--medium-title-font-size);
-    line-height: var(--medium-title-line-height);
-  } @else if $font == "title.small" {
-    font-size: var(--small-title-font-size);
-    line-height: var(--small-title-line-height);
-  } @else if $font == "body.large" {
-    font-size: var(--large-body-font-size);
-    line-height: var(--large-body-line-height);
-  } @else if $font == "body.medium" {
-    font-size: var(--medium-body-font-size);
-    line-height: var(--medium-body-line-height);
-  } @else if $font == "body.small" {
-    font-size: var(--small-body-font-size);
-    line-height: var(--small-body-line-height);
+    font-weight: var(--font-weight-extra-bold);
+  } @else if $font == "Headline 1" {
+    font-size: var(--headline-1-font-size);
+    line-height: var(--headline-1-line-height);
+    font-weight: var(--font-weight-extra-bold);
+  } @else if $font == "Headline 2" {
+    font-size: var(--headline-2-font-size);
+    line-height: var(--headline-2-line-height);
+    font-weight: var(--font-weight-extra-bold);
+  } @else if $font == "Headline 3" {
+    font-size: var(--headline-3-font-size);
+    line-height: var(--headline-3-line-height);
+  } @else if $font == "Headline 4" {
+    font-size: var(--headline-4-font-size);
+    line-height: var(--headline-4-line-height);
+  } @else if $font == "Body 1" {
+    font-size: var(--body-1-font-size);
+    line-height: var(--body-1-line-height);
+    font-weight: var(--font-weight-bold);
+  } @else if $font == "Body 2" {
+    font-size: var(--body-2-font-size);
+    line-height: var(--body-2-line-height);
+  } @else if $font == "Caption 1" {
+    font-size: var(--caption-1-font-size);
+    line-height: var(--caption-1-line-height);
+    font-weight: var(--font-weight-medium);
+  } @else if $font == "Caption 2" {
+    font-size: var(--caption-2-font-size);
+    line-height: var(--caption-2-line-height);
+    font-weight: var(--font-weight-regular);
   }
 
-  @if $weight == "400" {
+  @if $weight == "Regular" {
     font-weight: var(--font-weight-regular);
-  } @else if $weight == "500" {
+  } @else if $weight == "Medium" {
     font-weight: var(--font-weight-medium);
-  } @else if $weight == "600" {
+  } @else if $weight == "Semibold" {
     font-weight: var(--font-weight-semibold);
-  } @else if $weight == "700" {
+  } @else if $weight == "Bold" {
     font-weight: var(--font-weight-bold);
+  } @else if $weight == "Extrabold" {
+    font-weight: var(--font-weight-extra-bold);
+  } @else if $weight == "Black" {
+    font-weight: var(--font-weight-black);
   }
 
   @if $color-code {
