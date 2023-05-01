@@ -2,7 +2,7 @@
 
 .buttonWrapper {
   position: relative;
-  transform: translateZ(0);
+  transform: translate(0px, 0px);
   user-select: none;
   transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out,
     border-color 0.1s ease-in-out, opacity 0.1s ease-in-out;
@@ -13,34 +13,120 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  
-  /* TODO - 추후 디자인 정의 후 반영 */
-  color: color("black");
-  padding: 0px 32px;
-  width: 327px;
-  height: 56px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  background: #F2CD80;
-  border: 2px solid #000000;
-  border-radius: 100px;
+  box-shadow: var(--small);
+  border: 2px solid color("black");
 
   @media (hover: hover) and (pointer: fine) {
-    &:not(:disabled):after {
+    &::after {
       content: " ";
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: color("black");
-      opacity: 0;
-      transition: opacity 0.1s ease-in-out;
+      transition: opacity 0.1s ease-in-out, background-color 0.1s ease-in-out;
     }
 
-    &:not(:disabled):not(.disabled):hover:after {
-      opacity: 0.15;
+    &:not(:disabled):after {
+      opacity: 0;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+      transform: translate(0px, 2px);
+      box-shadow: 0px 2px 0px color("transparent");
+    }
+
+    &:not(:disabled):not(.disabled):active:after {
+      background-color: color("black");
+      opacity: 0.08;
+    }
+
+    &:disabled:after {
+      background-color: color("white");
+      opacity: 0.5;
     }
   }
+}
+
+.medium {
+  height: 56px;
+  border-radius: 12px;
+  padding: 0px 24px;
+  width: 160px;
+
+  @include text("Headline 4/Semibold");
+}
+
+.small {
+  height: 36px;
+  border-radius: 8px;
+  padding: 0px 16px;
+  width: 120px;
+
+  @include text("Body 2/Semibold");
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.white,
+.lemon,
+.salmon,
+.mustard,
+.moss,
+.berrymilk,
+.cloud {
+  @include text-color("black");
+}
+
+.indigo,
+.brick,
+.forest,
+.yam {
+  @include text-color("white");
+}
+
+.white {
+  background-color: color("white");
+}
+
+.lemon {
+  background-color: color("lemon");
+}
+
+.salmon {
+  background-color: color("salmon");
+}
+
+.mustard {
+  background-color: color("mustard");
+}
+
+.moss {
+  background-color: color("moss");
+}
+
+.berrymilk {
+  background-color: color("berrymilk");
+}
+
+.cloud {
+  background-color: color("cloud");
+}
+
+.indigo {
+  background-color: color("indigo");
+}
+
+.brick {
+  background-color: color("brick");
+}
+
+.forest {
+  background-color: color("forest");
+}
+
+.yam {
+  background-color: color("yam");
 }
