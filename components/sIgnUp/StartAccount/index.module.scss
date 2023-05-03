@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   max-width: 430px;
+  margin: -24px;
 
   & > div.startAccountBox {
     display: flex;
@@ -17,8 +18,8 @@
 
 .buttonWrapper {
   position: absolute;
-  bottom: 64px;
-  width: 100%;
+  bottom: 40px;
+  width: calc(100% - 48px);
   display: flex;
   justify-content: center;
 }
