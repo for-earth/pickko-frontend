@@ -15,7 +15,7 @@ function StartAccount() {
         </div>
       </div>
       <div className={styles.buttonWrapper}>
-        <Button type="button">
+        <Button type="button" fullWidth>
           카카오계정으로 시작하기
         </Button>
       </div>
