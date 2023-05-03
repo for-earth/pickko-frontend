@@ -31,19 +31,19 @@
   "homepage": "https://github.com/for-earth/picko-frontend#readme",
   "dependencies": {
     "clsx": "^1.2.1",
-    "next": "^13.3.1",
+    "next": "^13.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
-    "@next/eslint-plugin-next": "^13.3.1",
-    "@storybook/addon-essentials": "^7.0.7",
-    "@storybook/addon-interactions": "^7.0.7",
-    "@storybook/addon-links": "^7.0.7",
-    "@storybook/blocks": "^7.0.7",
-    "@storybook/nextjs": "^7.0.7",
-    "@storybook/react": "^7.0.7",
+    "@next/eslint-plugin-next": "^13.3.4",
+    "@storybook/addon-essentials": "^7.0.8",
+    "@storybook/addon-interactions": "^7.0.8",
+    "@storybook/addon-links": "^7.0.8",
+    "@storybook/blocks": "^7.0.8",
+    "@storybook/nextjs": "^7.0.8",
+    "@storybook/react": "^7.0.8",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@svgr/webpack": "6.5.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -83,16 +83,11 @@
     "react-test-renderer": "^18.2.0",
     "sass": "^1.62.1",
     "start-server-and-test": "^2.0.0",
-    "storybook": "^7.0.7",
+    "storybook": "^7.0.8",
     "styled-jsx": "^5.1.2",
     "typescript": "4.7.4",
     "util": "^0.12.5",
     "webpack": "^5.81.0"
   },
-  "packageManager": "yarn@3.5.0",
-  "dependenciesMeta": {
-    "next@13.3.1": {
-      "unplugged": true
-    }
-  }
+  "packageManager": "yarn@3.5.0"
 }
