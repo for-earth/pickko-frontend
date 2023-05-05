@@ -19,7 +19,6 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   experimental: {
-    appDir: true,
     typedRoutes: true,
   },
   swcMinify: true,
