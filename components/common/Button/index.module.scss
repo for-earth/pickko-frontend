@@ -16,46 +16,44 @@
   box-shadow: var(--small);
   border: 2px solid color("black");
 
-  @media (hover: hover) and (pointer: fine) {
-    &::after {
-      content: " ";
-      position: absolute;
-      top: -2px;
-      right: -2px;
-      bottom: -4px;
-      left: -2px;
-    }
+  &::after {
+    content: " ";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -4px;
+    left: -2px;
+  }
 
-    &.medium::after {
-      border-radius: 12px;
-    }
+  &.medium::after {
+    border-radius: 12px;
+  }
 
-    &.small::after {
-      border-radius: 8px;
-    }
+  &.small::after {
+    border-radius: 8px;
+  }
 
-    &:not(:disabled):after {
-      opacity: 0;
-    }
+  &:not(:disabled):after {
+    opacity: 0;
+  }
 
-    &:not(:disabled):not(.disabled):active {
-      transform: translate(0px, 2px);
-      box-shadow: 0px 2px 0px color("transparent");
-    }
+  &:not(:disabled):not(.disabled):active {
+    transform: translate(0px, 2px);
+    box-shadow: 0px 2px 0px color("transparent");
+  }
 
-    &:not(:disabled):not(.disabled):active:after {
-      background-color: color("black");
-      opacity: 0.08;
-    }
+  &:not(:disabled):not(.disabled):active:after {
+    background-color: color("black");
+    opacity: 0.08;
+  }
 
-    &:disabled:after {
-      background-color: color("white");
-      opacity: 0.5;
-    }
+  &:disabled:after {
+    background-color: color("white");
+    opacity: 0.5;
+  }
 
-    &:disabled {
-      overflow: initial;
-    }
+  &:disabled {
+    overflow: initial;
   }
 }
 

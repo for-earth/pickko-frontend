@@ -1,3 +1,5 @@
+import { createElement } from "react";
+
 import { Meta, Title, IconGallery, IconItem } from "@storybook/blocks";
 
 import { OutlineIcon, SolidIcon } from "lib/assets/icons";
@@ -11,59 +13,23 @@ import { OutlineIcon, SolidIcon } from "lib/assets/icons";
 ## Outline Icon
 
 <IconGallery>
-  <IconItem name="OutlineFeed">
-    <OutlineIcon.Feed name="OutlineFeed" />
-  </IconItem>
-
-  <IconItem name="OutlinePick">
-    <OutlineIcon.Pick name="OutlinePick" />
-  </IconItem>
-
-  <IconItem name="OutlineUser">
-    <OutlineIcon.User name="OutlineUser" />
-  </IconItem>
-
-  <IconItem name="OutlineHeart">
-    <OutlineIcon.Heart name="OutlineHeart" />
-  </IconItem>
-
-  <IconItem name="OutlineArrowRight">
-    <OutlineIcon.ArrowRight name="OutlineArrowRight" />
-  </IconItem>
-
-  <IconItem name="OutlineChevronDown">
-    <OutlineIcon.ChevronDown name="OutlineChevronDown" />
-  </IconItem>
-
-  <IconItem name="OutlineRefresh">
-    <OutlineIcon.Refresh name="OutlineRefresh" />
-  </IconItem>
-
-  <IconItem name="OutlineSearch">
-    <OutlineIcon.Search name="OutlineSearch" />
-  </IconItem>
-
-  <IconItem name="OutlineWrite">
-    <OutlineIcon.Write name="OutlineWrite" />
-  </IconItem>
+  {Object.entries(OutlineIcon).map(([key, value]) => (
+    <IconItem name={key} key={key}>
+      {createElement(value, {
+        name: key,
+      })}
+    </IconItem>
+  ))}
 </IconGallery>
 
 ## Solid Icon
 
 <IconGallery>
-  <IconItem name="SolidFeed">
-    <SolidIcon.Feed name="SolidFeed" />
-  </IconItem>
-
-  <IconItem name="SolidPick">
-    <SolidIcon.Pick name="SolidPick" />
-  </IconItem>
-
-  <IconItem name="SolidUser">
-    <SolidIcon.User name="SolidUser" />
-  </IconItem>
-
-  <IconItem name="SolidHeart">
-    <SolidIcon.Heart name="SolidHeart" />
-  </IconItem>
+  {Object.entries(SolidIcon).map(([key, value]) => (
+    <IconItem name={key} key={key}>
+      {createElement(value, {
+        name: key,
+      })}
+    </IconItem>
+  ))}
 </IconGallery>
