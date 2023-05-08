@@ -1,7 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import {
-  HTMLProps, ReactElement, ReactNode,
-} from 'react';
+import { HTMLProps, ReactElement, ReactNode } from 'react';
 
 import Link from 'next/link';
 
