@@ -8,6 +8,8 @@
   @if length($list) == 2 {
     $font: nth($list, 1);
     $weight: nth($list, 2);
+  } @else {
+    $font: $text;
   }
 
   @if $font == "Display" {

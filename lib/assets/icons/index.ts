@@ -12,6 +12,7 @@ import Logout from './outline/logout.svg';
 import Refresh from './outline/refresh.svg';
 import Search from './outline/search.svg';
 import OutlineSetting from './outline/setting.svg';
+import Share from './outline/share.svg';
 import OutlineUser from './outline/user.svg';
 import Write from './outline/write.svg';
 import SolidAlert from './solid/alert.svg';
@@ -38,6 +39,7 @@ const OutlineIcon = {
   Search,
   Logout,
   Write,
+  Share,
 };
 
 const SolidIcon = {
