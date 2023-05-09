@@ -4,7 +4,13 @@ import Card from '.';
 
 describe('Card', () => {
   const renderCard = () => render((
-    <Card icon="🙇‍♂️" type={given.type} profile={given.profile} title="title" />
+    <Card
+      icon="🙇‍♂️"
+      type={given.type}
+      profile={given.profile}
+      title="title"
+      color="indigo"
+    />
   ));
 
   context('type이 default인 경우', () => {
