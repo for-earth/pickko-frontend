@@ -13,6 +13,9 @@ const meta: Meta<typeof Card> = {
     maxWidth: {
       control: { type: 'text' },
     },
+    profile: {
+      description: '`type`이 `avatar`일 경우 값을 넣어주어야 합니다.\n',
+    },
   },
 };
 
