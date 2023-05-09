@@ -6,7 +6,7 @@
   max-width: 430px;
   min-height: calc(var(--vh, 1vh) * 100);
   position: relative;
-  color: #FFFFFF;
+  color: color("white");
   margin: 0 auto;
   padding: 24px;
 
@@ -42,4 +42,48 @@
       content: none;
     }
   }
+}
+
+.white {
+  background-color: color("white");
+}
+
+.lemon {
+  background-color: color("lemon");
+}
+
+.salmon {
+  background-color: color("salmon");
+}
+
+.mustard {
+  background-color: color("mustard");
+}
+
+.moss {
+  background-color: color("moss");
+}
+
+.berrymilk {
+  background-color: color("berrymilk");
+}
+
+.cloud {
+  background-color: color("cloud");
+}
+
+.indigo {
+  background-color: color("indigo");
+}
+
+.brick {
+  background-color: color("brick");
+}
+
+.forest {
+  background-color: color("forest");
+}
+
+.yam {
+  background-color: color("yam");
 }

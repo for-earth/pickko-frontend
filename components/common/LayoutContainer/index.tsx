@@ -2,15 +2,20 @@
 
 import { PropsWithChildren } from 'react';
 
+import clsx from 'clsx';
+import { ColorType } from 'lib/types';
+
 import styles from './index.module.scss';
 
 type Props = {
-  backgroundColor: string;
+  backgroundColor: ColorType;
 };
 
 function LayoutContainer({ children, backgroundColor }: PropsWithChildren<Props>) {
   return (
-    <div className={styles.layoutContainer} style={{ backgroundColor }}>
+    <div
+      className={clsx(styles.layoutContainer, styles[backgroundColor])}
+    >
       {children}
     </div>
   );
