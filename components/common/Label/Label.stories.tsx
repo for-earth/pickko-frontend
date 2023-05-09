@@ -7,7 +7,7 @@ const meta: Meta<typeof Label> = {
   component: Label,
   tags: ['autodocs'],
   args: {
-    children: 'Label',
+    text: 'Label',
   },
 };
 

@@ -1,7 +1,5 @@
 'use client';
 
-import { ReactNode } from 'react';
-
 import clsx from 'clsx';
 import { ColorType } from 'lib/types';
 
@@ -9,16 +7,16 @@ import styles from './index.module.scss';
 
 type Props = {
   color?: Exclude<ColorType, 'black'>;
-  children: ReactNode;
+  text: string;
 };
 
-function Label({ children, color = 'white' }: Props) {
+function Label({ text, color = 'white' }: Props) {
   return (
     <div className={clsx(styles.labelWrapper, {
       [styles[color]]: color,
     })}
     >
-      {children}
+      {text}
     </div>
   );
 }

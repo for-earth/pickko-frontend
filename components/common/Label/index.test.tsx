@@ -6,9 +6,7 @@ describe('Label', () => {
   const labelText = 'labelText';
 
   const renderLabel = () => render((
-    <Label>
-      {labelText}
-    </Label>
+    <Label text={labelText} />
   ));
 
   it('label이 나타나야만한다', () => {
