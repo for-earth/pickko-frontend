@@ -5,13 +5,10 @@
   align-items: center;
   justify-content: flex-start;
   padding: 12px 24px;
-  background: #606196;
   border: 2px solid color("black");
   box-shadow: var(--small);
   border-radius: 4px;
   width: 100%;
-
-  @include text-color("salmon");
 }
 
 .default {
@@ -100,4 +97,28 @@
   width: 0px;
   height: 12px;
   border: 0.5px solid color("white");
+}
+
+.indigo {
+  background: color("indigo");
+
+  @include text-color("salmon");
+}
+
+.yam {
+  background: color("yam");
+
+  @include text-color("moss");
+}
+
+.cloud {
+  background: color("cloud");
+
+  @include text-color("lemon");
+}
+
+.forest {
+  background: color("forest");
+
+  @include text-color("berrymilk");
 }

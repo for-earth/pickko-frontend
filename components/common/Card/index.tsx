@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 
 import clsx from 'clsx';
 import { OutlineIcon } from 'lib/assets/icons';
+import { ColorType } from 'lib/types';
 
 import styles from './index.module.scss';
 
@@ -13,6 +14,8 @@ type Props<T = CardType> = {
   type: T;
   title: string;
   icon: ReactNode;
+  maxWidth?: `${number}px`,
+  color: Exclude<ColorType, 'black'>;
   profile: T extends 'default' ? null : {
     company: string;
     position: string;
@@ -21,14 +24,19 @@ type Props<T = CardType> = {
 };
 
 function Card<T extends CardType>({
-  icon, title, type, profile,
+  icon, title, type, profile, color, maxWidth,
 }: Props<T>) {
   const withAvatar = type === 'avatar';
 
   return (
-    <div className={clsx(styles.cardWrapper, {
-      [styles[type]]: type,
-    })}
+    <div
+      className={clsx(styles.cardWrapper, {
+        [styles[type]]: type,
+        [styles[color]]: color,
+      })}
+      style={{
+        maxWidth,
+      }}
     >
       <div className={styles.avatarWrapper}>
         <div className={styles.icon}>
