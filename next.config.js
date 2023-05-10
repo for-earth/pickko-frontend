@@ -22,6 +22,9 @@ const nextConfig = {
     typedRoutes: true,
   },
   swcMinify: true,
+  images: {
+    unoptimized: true,
+  },
   webpack: (config) => {
     const fileLoaderRule = config.module.rules.find((rule) => rule?.test?.test?.('.svg'));
 
