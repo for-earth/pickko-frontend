@@ -1,0 +1,21 @@
+@import "/styles/main.scss";
+
+.avatarWrapper {
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.hasClickEvent {
+  cursor: pointer;
+}
+
+.medium {
+  min-width: 56px;
+  min-height: 56px;
+}
+
+.large {
+  min-width: 80px;
+  min-height: 80px;
+}
