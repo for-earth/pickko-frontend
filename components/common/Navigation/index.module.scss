@@ -1,25 +1,43 @@
 @import "/styles/main.scss";
 
-.navigationWrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 40px;
-  background-color: color("white");
-  border: 2px solid color("black");
-  box-shadow: var(--medium);
-  border-radius: 100px;
+.navigationContainer {
   width: 100%;
-  height: 64px;
+  max-width: 430px;
+  display: flex;
+  justify-content: center;
+  z-index: var(--navigation-z-index);
 
-  .navigationItems {
+  .navigationWrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 16px;
+    padding: 0px 40px;
+    background-color: color("white");
+    border: 2px solid color("black");
+    box-shadow: var(--medium);
+    border-radius: 100px;
     width: 100%;
+    height: 64px;
+
+    .navigationItems {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px;
+      gap: 16px;
+      width: 100%;
+    }
+  }
+}
+
+.fixed {
+  position: fixed;
+  bottom: 20px;
+  margin: 0 -24px;
+
+  .navigationWrapper {
+    width: calc(100% - 32px);
   }
 }

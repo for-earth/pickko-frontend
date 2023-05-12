@@ -1,5 +1,6 @@
 'use client';
 
+import { Route } from 'next';
 import Link from 'next/link';
 
 import { OutlineIcon, SolidIcon } from 'lib/assets/icons';
@@ -7,7 +8,7 @@ import { OutlineIcon, SolidIcon } from 'lib/assets/icons';
 import styles from './index.module.scss';
 
 type Props = {
-  href: __next_route_internal_types__.RouteImpl<unknown>;
+  href: Route;
   iconType: 'Feed' | 'Heart' | 'User';
   isActive: boolean;
 };

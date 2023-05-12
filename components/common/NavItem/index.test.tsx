@@ -4,7 +4,7 @@ import NavItem from '.';
 
 describe('NavItem', () => {
   const renderNavItem = () => render((
-    <NavItem href="/feed" iconType="Feed" isActive={given.isActive} />
+    <NavItem href="/" iconType="Feed" isActive={given.isActive} />
   ));
 
   context('isActive가 true인 경우', () => {

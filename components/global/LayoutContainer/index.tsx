@@ -11,6 +11,7 @@ type Props = {
   backgroundColor: ColorType;
 };
 
+// TODO - 삭제
 function LayoutContainer({ children, backgroundColor }: PropsWithChildren<Props>) {
   return (
     <div
