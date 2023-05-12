@@ -40,7 +40,7 @@ const OutlineIcon = {
   Logout,
   Write,
   Share,
-};
+} as const;
 
 const SolidIcon = {
   Feed: SolidFeed,
@@ -49,7 +49,7 @@ const SolidIcon = {
   Heart: SolidHeart,
   Alert: SolidAlert,
   Setting: SolidSetting,
-};
+} as const;
 
 export {
   OutlineIcon,
