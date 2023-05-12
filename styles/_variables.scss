@@ -1,5 +1,5 @@
 :root {
-  $black: '#000000';
+  $black: "#000000";
   /* color */
   --white: #ffffff;
   --black: #{$black};
@@ -55,4 +55,8 @@
 
   --caption-2-font-size: 11px;
   --caption-2-line-height: 18px;
+}
+
+:root {
+  --navigation-z-index: 10;
 }

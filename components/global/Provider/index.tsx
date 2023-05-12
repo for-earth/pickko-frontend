@@ -2,6 +2,7 @@
 
 import { PropsWithChildren } from 'react';
 
+import { Route } from 'next';
 import { usePathname } from 'next/navigation';
 
 import Navigation from 'components/common/Navigation';
@@ -12,7 +13,7 @@ function Provider({ children }: PropsWithChildren) {
   return (
     <>
       {children}
-      <Navigation activePathname={pathname} />
+      <Navigation activePathname={pathname as Route} isFixed />
     </>
   );
 }

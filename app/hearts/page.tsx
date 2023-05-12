@@ -1,5 +1,3 @@
-import Navigation from 'components/common/Navigation';
-
 export const metadata = {
   title: 'hearts',
 };
@@ -7,9 +5,7 @@ export const metadata = {
 function HeartsPage() {
   return (
     <div>
-      <Navigation activePathname="hearts" />
-      <Navigation activePathname="feed" />
-      <Navigation activePathname="user" />
+      hearts page
     </div>
   );
 }
