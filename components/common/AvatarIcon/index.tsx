@@ -19,26 +19,32 @@ interface Props {
 function AvatarIcon({
   src, alt = '프로필 이미지', size = 'medium', onClick, priority = false,
 }: Props): ReactElement {
-  const className = clsx(styles.avatarWrapper, [styles[size]], {
-    [styles.hasClickEvent]: typeof onClick === 'function',
-  });
-
   const imageSize: Record<AvatarSize, number> = {
     large: 80,
     medium: 56,
   };
 
   return (
-    <Image
-      className={className}
-      priority={priority}
-      src={src || '/img_avatar_default.png'}
-      width={imageSize[size]}
-      height={imageSize[size]}
-      alt={alt}
-      data-testid="avatar-icon"
+    // TODO - 클릭 이벤트 생길 시 추가
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    <div
+      className={clsx(styles.avatarWrapper, {
+        [styles.hasClickEvent]: typeof onClick === 'function',
+      })}
       onClick={onClick}
-    />
+      role="button"
+      tabIndex={0}
+    >
+      <Image
+        className={clsx([styles[size]])}
+        priority={priority}
+        src={src || '/img_avatar_default.png'}
+        data-testid="avatar-icon"
+        width={imageSize[size]}
+        height={imageSize[size]}
+        alt={alt}
+      />
+    </div>
   );
 }
 
