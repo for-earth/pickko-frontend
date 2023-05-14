@@ -1,7 +1,11 @@
+$black: #000000;
+$white: #ffffff;
+$opacity-010: 0.1;
+$opacity-040: 0.4;
+
 :root {
-  $black: "#000000";
   /* color */
-  --white: #ffffff;
+  --white: #{$white};
   --black: #{$black};
   --lemon: #f4eb5d;
   --salmon: #ff9356;
@@ -13,6 +17,9 @@
   --indigo: #61609a;
   --yam: #a05595;
   --brick: #ba4c4a;
+
+  --black-tertiary: #{rgba($black, $opacity-010)};
+  --white-secondary: #{rgba($white, $opacity-040)};
 
   /* effect style */
   --small: 0px 2px 0px #{$black};
