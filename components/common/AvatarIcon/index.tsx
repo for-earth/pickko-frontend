@@ -32,7 +32,6 @@ function AvatarIcon({
         [styles.hasClickEvent]: typeof onClick === 'function',
       })}
       onClick={onClick}
-      data-testid="avatar-icon"
       role="button"
       tabIndex={0}
     >
@@ -40,6 +39,7 @@ function AvatarIcon({
         className={clsx([styles[size]])}
         priority={priority}
         src={src || '/img_avatar_default.png'}
+        data-testid="avatar-icon"
         width={imageSize[size]}
         height={imageSize[size]}
         alt={alt}
