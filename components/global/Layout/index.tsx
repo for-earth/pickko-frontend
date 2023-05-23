@@ -16,6 +16,8 @@ function Layout({ children }: PropsWithChildren) {
 
   useResizeViewportHeight();
 
+  const hasNavigation: Route[] = ['/', '/hearts', '/user'];
+
   const layoutBackgroundColor: Record<Route, ColorType> = {
     '/': 'berrymilk',
     '/hearts': 'forest',
@@ -24,7 +26,7 @@ function Layout({ children }: PropsWithChildren) {
   };
 
   return (
-    <div className={styles.layoutWrapper}>
+    <div className={clsx(styles.layoutWrapper, hasNavigation && styles.hasNavigation)}>
       <div
         className={clsx(styles.layoutContainer, styles[layoutBackgroundColor[pathname as Route]])}
       >
