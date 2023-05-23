@@ -1,0 +1,167 @@
+@import "/styles/main.scss";
+
+.buttonWrapper {
+  position: relative;
+  transform: translate(0px, 0px);
+  user-select: none;
+  transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out,
+    border-color 0.1s ease-in-out, opacity 0.1s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid color("black");
+  border-radius: 100px;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border-radius: 100px;
+  }
+
+  &:not(:disabled):after {
+    opacity: 0;
+  }
+
+  &:not(:disabled):not(.disabled):active:after {
+    background-color: color("black");
+    opacity: 0.08;
+  }
+
+  &:not(.ghost):disabled:after {
+    background-color: color("white");
+    opacity: 0.5;
+  }
+
+  &.ghost:disabled > div,
+  &.ghost:disabled > svg {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    overflow: initial;
+  }
+}
+
+.medium {
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+}
+
+.small {
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+}
+
+.svg-medium {
+  min-width: 24px;
+  width: 24px;
+  min-height: 24px;
+  height: 24px;
+}
+
+.svg-small {
+  min-width: 18px;
+  width: 18px;
+  min-height: 18px;
+  height: 18px;
+}
+
+.white,
+.lemon,
+.salmon,
+.mustard,
+.moss,
+.berrymilk,
+.cloud .ghost {
+  svg.solid {
+    fill: color("black");
+
+    & > path {
+      fill: color("black");
+    }
+  }
+
+  svg.outline {
+    & > path {
+      stroke: color("black");
+    }
+  }
+}
+
+.indigo,
+.brick,
+.forest,
+.yam {
+  svg.solid {
+    fill: color("white");
+
+    & > path {
+      fill: color("white");
+    }
+  }
+
+  svg.outline {
+    & > path {
+      stroke: color("white");
+    }
+  }
+}
+
+.white {
+  background-color: color("white");
+}
+
+.lemon {
+  background-color: color("lemon");
+}
+
+.salmon {
+  background-color: color("salmon");
+}
+
+.mustard {
+  background-color: color("mustard");
+}
+
+.moss {
+  background-color: color("moss");
+}
+
+.berrymilk {
+  background-color: color("berrymilk");
+}
+
+.cloud {
+  background-color: color("cloud");
+}
+
+.indigo {
+  background-color: color("indigo");
+}
+
+.brick {
+  background-color: color("brick");
+}
+
+.forest {
+  background-color: color("forest");
+}
+
+.yam {
+  background-color: color("yam");
+}
+
+.ghost {
+  background-color: transparent;
+  border: none;
+}

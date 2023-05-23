@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import clsx from 'clsx';
 
 import styles from './index.module.scss';
@@ -32,4 +34,4 @@ function Spinner({
   );
 }
 
-export default Spinner;
+export default memo(Spinner);
