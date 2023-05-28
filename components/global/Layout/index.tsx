@@ -23,7 +23,6 @@ function Layout({ children }: PropsWithChildren) {
     '/hearts': 'forest',
     '/sign-up': 'indigo',
     '/user': 'mustard',
-    '/progress': 'moss',
   };
 
   return (
