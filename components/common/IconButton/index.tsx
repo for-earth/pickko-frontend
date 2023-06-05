@@ -15,9 +15,9 @@ import Spinner from '../Spinner';
 import styles from './index.module.scss';
 
 type ButtonSize = 'small' | 'medium';
-type IconType = 'solid' | 'outline';
+export type IconType = 'solid' | 'outline';
 
-interface Props<T extends IconType> extends Omit<HTMLProps<HTMLButtonElement | HTMLAnchorElement>, 'size'> {
+export interface IconButtonProps<T extends IconType> extends Omit<HTMLProps<HTMLButtonElement | HTMLAnchorElement>, 'size'> {
   color?: Exclude<ColorType, 'black'> | 'ghost';
   size?: ButtonSize;
   isLoading?: boolean;
@@ -36,7 +36,7 @@ function IconButton<T extends IconType>({
   iconType,
   disabled,
   ...rest
-}: Props<T>): ReactElement {
+}: IconButtonProps<T>): ReactElement {
   const htmlProps = rest as any;
 
   const whiteColors: (ColorType | 'ghost')[] = ['forest', 'indigo', 'yam', 'brick'];
@@ -54,7 +54,7 @@ function IconButton<T extends IconType>({
       size={size}
       color={whiteColors.includes(color) ? 'white' : 'black'}
     />
-  ) : <SvgIcon className={clsx(styles[`svg-${size}`], styles[color], styles[iconType])} data-testid="qweqwe" />;
+  ) : <SvgIcon className={clsx(styles[`svg-${size}`], styles[color], styles[iconType])} />;
 
   if (href) {
     return (
