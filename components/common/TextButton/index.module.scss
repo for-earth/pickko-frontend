@@ -1,0 +1,23 @@
+@import "/styles/main.scss";
+
+.textButtonWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+
+  .text {
+    cursor: pointer;
+
+    @include text("Headline 4/Semibold");
+  }
+
+  .text.black {
+    @include text-color("black");
+  }
+
+  .text.white {
+    @include text-color("white");
+  }
+}
