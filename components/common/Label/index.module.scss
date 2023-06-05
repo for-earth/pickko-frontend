@@ -8,12 +8,12 @@
   padding: 0px 16px;
   width: fit-content;
   height: 40px;
-  border-radius: 4px;
+  border-radius: 100px;
   border: 2px solid color("black");
   user-select: none;
   box-shadow: var(--small);
 
-  @include text("Body 2/Black");
+  @include text("Body 1/Bold");
 }
 
 .white {
