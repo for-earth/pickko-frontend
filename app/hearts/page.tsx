@@ -1,12 +1,12 @@
+import HeartsContainer from 'components/hearts/HeartsContainer';
+
 export const metadata = {
   title: 'hearts',
 };
 
 function HeartsPage() {
   return (
-    <div>
-      hearts page
-    </div>
+    <HeartsContainer />
   );
 }
 

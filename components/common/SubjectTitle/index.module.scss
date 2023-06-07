@@ -1,0 +1,91 @@
+@import "/styles/main.scss";
+
+.subjectTitleWrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 48px);
+  white-space: pre-line;
+  word-break: keep-all;
+  user-select: none;
+
+  .title {
+    text-align: center;
+
+    @include text("Display");
+
+    &.lemon {
+      @include text-color("lemon");
+    }
+
+    &.salmon {
+      @include text-color("salmon");
+    }
+
+    &.mustard {
+      @include text-color("mustard");
+    }
+
+    &.moss {
+      @include text-color("moss");
+    }
+
+    &.berrymilk {
+      @include text-color("berrymilk");
+    }
+
+    &.cloud {
+      @include text-color("cloud");
+    }
+
+    &.indigo {
+      @include text-color("indigo");
+    }
+
+    &.brick {
+      @include text-color("brick");
+    }
+
+    &.forest {
+      @include text-color("forest");
+    }
+
+    &.yam {
+      @include text-color("yam");
+    }
+  }
+}
+
+.emoji {
+  position: absolute;
+
+  &.large {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 80px;
+    top: -60px;
+  }
+
+  &.medium {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    top: -20px;
+  }
+
+  &.small {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    top: -12px;
+  }
+
+  &.xSmall {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    top: -4px;
+  }
+}

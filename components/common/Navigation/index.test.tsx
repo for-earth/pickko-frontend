@@ -6,7 +6,7 @@ describe('Navigation', () => {
   const ACTIVE_PATHNAME = ['/hearts', '/', '/user'];
 
   const renderNavigation = () => render((
-    <Navigation activePathname={given.activePathname} isFixed />
+    <Navigation activePathname={given.activePathname} />
   ));
 
   context(`pathname이 ${ACTIVE_PATHNAME.join(', ')}인 경우`, () => {

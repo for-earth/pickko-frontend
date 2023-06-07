@@ -1,0 +1,16 @@
+.headerWrapper {
+  width: 100%;
+  max-width: 430px;
+  position: fixed;
+  margin: auto -24px;
+  z-index: var(--hearts-header-z-index);
+
+  .headerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    margin: auto;
+    width: calc(100% - 48px);
+  }
+}
