@@ -12,7 +12,7 @@ import styles from './index.module.scss';
 
 type Props = {
   activePathname: Route;
-  isFixed: boolean;
+  isFixed?: boolean;
 };
 
 const ACTIVE_PATHNAME = ['/hearts', '/', '/user'];
