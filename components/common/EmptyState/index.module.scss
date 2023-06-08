@@ -1,0 +1,19 @@
+@import "/styles/main.scss";
+
+.emptyState {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin: auto;
+  width: calc(100% - 48px);
+
+  .emptyText {
+    margin: 24px 0 40px 0;
+    text-align: center;
+
+    @include text("Headline 2/Bold", "black");
+  }
+}
