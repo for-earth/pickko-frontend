@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import { ColorType } from 'lib/types';
 
-import styles from './index.module.scss';
+import Emoji, { EmojiSize } from '../Emoji';
 
-type EmojiSize = 'large' | 'medium' | 'small' | 'xSmall';
+import styles from './index.module.scss';
 
 type Props = {
   title: string;
@@ -17,7 +17,11 @@ function SubjectTitle({
 }: Props) {
   return (
     <div className={styles.subjectTitleWrapper}>
-      <div className={clsx(styles.emoji, styles[emojiSize])}>{emoji}</div>
+      <Emoji
+        className={clsx(styles.emoji, styles[emojiSize])}
+        emoji={emoji}
+        emojiSize={emojiSize}
+      />
       <div className={clsx(styles.title, styles[color])}>{title}</div>
     </div>
   );

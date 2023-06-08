@@ -26,30 +26,9 @@ export default meta;
 
 type Story = StoryObj<typeof SubjectTitle>;
 
-export const LargeEmoji: Story = {
+export const Default: Story = {
   args: {
     color: 'lemon',
     emojiSize: 'large',
-  },
-};
-
-export const MediumEmoji: Story = {
-  args: {
-    color: 'lemon',
-    emojiSize: 'medium',
-  },
-};
-
-export const SmallEmoji: Story = {
-  args: {
-    color: 'lemon',
-    emojiSize: 'small',
-  },
-};
-
-export const XSmallEmoji: Story = {
-  args: {
-    color: 'lemon',
-    emojiSize: 'xSmall',
   },
 };
